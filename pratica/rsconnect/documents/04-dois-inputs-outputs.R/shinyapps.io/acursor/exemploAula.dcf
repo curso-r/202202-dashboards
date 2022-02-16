@@ -1,0 +1,14 @@
+name: exemploAula
+title: exemploAula
+username:
+account: acursor
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5663388
+bundleId: 5583337
+url: https://acursor.shinyapps.io/exemploAula/
+when: 1644972865.8264
+lastSyncTime: 1644972865.8264
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: 01-ola-mundo.R|02-output.R|03-output-input.R
