@@ -76,11 +76,25 @@ dplyr::mutate(
 ## Scripts utilizados em aula
 
 ```{r}
-pasta <- "exemplos_de_aula/"
+pasta <- "pratica/"
+
+listar_arquivos_github <- function (repo, dir = NULL, pattern = NULL, org = "curso-r") {
+    req <- httr::GET(paste0("https://api.github.com/repos/", 
+        org, "/", repo, "/git/trees/main?recursive=1"))
+    arquivos <- unlist(lapply(httr::content(req)$tree, "[", "path"), 
+        use.names = FALSE)
+    if (!is.null(dir)) {
+        arquivos <- grep(dir, arquivos, value = TRUE, fixed = TRUE)
+    }
+    if (!is.null(pattern)) {
+        arquivos <- arquivos[grep(pattern, arquivos)]
+    }
+    arquivos
+}
 
 knitr::kable(
   tibble::tibble(
-    script = CursoRopen:::list_github_files(params$main_repo, pasta, ".R$"),
+    script = listar_arquivos_github(params$turma, pasta, ".R$"),
     link = paste0(
       "https://github.com/curso-r/",
       params$turma,
@@ -88,6 +102,7 @@ knitr::kable(
       script
     )
   ) %>%
+    dplyr::filter(!stringr::str_detect(script, "rsconnect/")) %>%
     dplyr::mutate(script = glue::glue("[{script}]({link})")) %>%
     dplyr::select(script)
 )
