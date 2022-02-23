@@ -31,12 +31,16 @@ Fora do horário de aula ou monitoria:
 
 ## Scripts utilizados em aula
 
-| script                                                                                                                        |
-|:------------------------------------------------------------------------------------------------------------------------------|
-| [pratica/01-ola-mundo.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/01-ola-mundo.R)                     |
-| [pratica/02-output.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/02-output.R)                           |
-| [pratica/03-output-input.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/03-output-input.R)               |
-| [pratica/04-dois-inputs-outputs.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/04-dois-inputs-outputs.R) |
+| script                                                                                                                          |
+|:--------------------------------------------------------------------------------------------------------------------------------|
+| [pratica/01-ola-mundo.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/01-ola-mundo.R)                       |
+| [pratica/02-output.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/02-output.R)                             |
+| [pratica/03-output-input.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/03-output-input.R)                 |
+| [pratica/04-dois-inputs-outputs.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/04-dois-inputs-outputs.R)   |
+| [pratica/05-amostra-sem-reactive.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/05-amostra-sem-reactive.R) |
+| [pratica/06-amostra-com-reactive.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/06-amostra-com-reactive.R) |
+| [pratica/07-disparo-reatividade.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/07-disparo-reatividade.R)   |
+| [pratica/08-eventReactive.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/08-eventReactive.R)               |
 
 ## Lição de casa
 
