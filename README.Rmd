@@ -124,6 +124,21 @@ tibble::tibble(
 ```
 
 
+## Lição de casa extra &#x1f913;
+
+```{r}
+tibble::tibble(
+  nome = CursoRopen:::list_github_files(params$main_repo, "exercicios/"),
+  link = paste0("https://curso-r.github.io/", params$main_repo, "/", nome),
+  exercicio = glue::glue("[{nome}]({link})")
+) %>%
+  dplyr::filter(!stringr::str_detect(nome, "resolucao_")) %>% 
+  dplyr::select(exercicio) %>% 
+  dplyr::slice(15:18) %>% 
+  knitr::kable()
+```
+
+
 ## Trabalhos finais premiados
 
 A definir.
