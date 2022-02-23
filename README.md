@@ -31,17 +31,12 @@ Fora do horário de aula ou monitoria:
 
 ## Scripts utilizados em aula
 
-<<<<<<< HEAD
-| script |
-|:-------|
-=======
 | script                                                                                                                        |
-| :---------------------------------------------------------------------------------------------------------------------------- |
+|:------------------------------------------------------------------------------------------------------------------------------|
 | [pratica/01-ola-mundo.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/01-ola-mundo.R)                     |
 | [pratica/02-output.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/02-output.R)                           |
 | [pratica/03-output-input.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/03-output-input.R)               |
 | [pratica/04-dois-inputs-outputs.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/04-dois-inputs-outputs.R) |
->>>>>>> 8a98602bb80e8e13c7aed6d255fd1c0f0b56c67c
 
 ## Lição de casa
 
