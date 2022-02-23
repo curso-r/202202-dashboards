@@ -119,7 +119,7 @@ tibble::tibble(
 ) %>%
   dplyr::filter(!stringr::str_detect(nome, "resolucao_")) %>% 
   dplyr::select(exercicio) %>% 
-  dplyr::slice(2:3) %>% 
+  dplyr::slice(2:6) %>% 
   knitr::kable()
 ```
 
