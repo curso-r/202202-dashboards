@@ -42,6 +42,10 @@ Fora do horário de aula ou monitoria:
 | [pratica/06-amostra-com-reactive.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/06-amostra-com-reactive.R) |
 | [pratica/07-disparo-reatividade.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/07-disparo-reatividade.R)   |
 | [pratica/08-eventReactive.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/08-eventReactive.R)               |
+| [pratica/09-debug.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/09-debug.R)                               |
+| [pratica/10-dados.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/10-dados.R)                               |
+| [pratica/11-exemplo-html.html](https://github.com/curso-r/202202-dashboards/blob/master/pratica/11-exemplo-html.html)           |
+| [pratica/12-gridsystem.R](https://github.com/curso-r/202202-dashboards/blob/master/pratica/12-gridsystem.R)                     |
 
 ## Lição de casa
 

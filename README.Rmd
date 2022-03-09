@@ -94,7 +94,7 @@ listar_arquivos_github <- function (repo, dir = NULL, pattern = NULL, org = "cur
 
 knitr::kable(
   tibble::tibble(
-    script = listar_arquivos_github(params$turma, pasta, ".R$"),
+    script = listar_arquivos_github(params$turma, pasta, ".R$|.html$"),
     link = paste0(
       "https://github.com/curso-r/",
       params$turma,
