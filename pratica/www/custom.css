@@ -1,0 +1,15 @@
+.skin-purple .left-side, .skin-purple .main-sidebar, .skin-purple .wrapper {
+  background-color: #311a4a;
+}
+
+.content-wrapper, .right-side {
+  background-color: #d0bee9;
+}
+
+[class*=sidebar-dark-] {
+  background-color: #3c0756;
+}
+
+.navbar-white {
+  background-color: #412276;
+}
