@@ -78,7 +78,8 @@ ui <- dashboardPage(
                 selectInput(
                   "genero",
                   label = "Escolha o gênero",
-                  choices = generos
+                  choices = generos,
+                  multiple = TRUE
                 )
               )
             )
@@ -121,10 +122,15 @@ server <- function(input, output, session) {
       ))
   })
 
+  base_filtrada <- reactive({
+    req(input$genero)
+    imdb %>%
+      filter(stringr::str_detect(generos, input$genero))
+  })
+
   output$num_filmes <- renderValueBox({
 
-    num_filmes <- imdb %>%
-      filter(stringr::str_detect(generos, input$genero)) %>%
+    num_filmes <- base_filtrada() %>%
       nrow()
 
     valueBox(
@@ -137,8 +143,7 @@ server <- function(input, output, session) {
 
   output$orcamento_medio <- renderValueBox({
 
-    orc_medio <- imdb %>%
-      filter(stringr::str_detect(generos, input$genero)) %>%
+    orc_medio <- base_filtrada() %>%
       summarise(orc_medio = mean(orcamento, na.rm = TRUE)) %>%
       pull(orc_medio) %>%
       scales::dollar(accuracy = 1)
@@ -153,8 +158,7 @@ server <- function(input, output, session) {
 
   output$receita_media <- renderValueBox({
 
-    receita_media <- imdb %>%
-      filter(stringr::str_detect(generos, input$genero)) %>%
+    receita_media <- base_filtrada() %>%
       summarise(receita_media = mean(receita, na.rm = TRUE)) %>%
       pull(receita_media) %>%
       scales::dollar(accuracy = 1)
@@ -168,6 +172,14 @@ server <- function(input, output, session) {
   })
 
   output$grafico_num_filmes <- renderPlot({
+
+    validate(
+      need(
+        isTruthy(input$genero),
+        "Selecione ao menos um gênero..."
+      )
+    )
+
     imdb %>%
       filter(stringr::str_detect(generos, input$genero)) %>%
       count(ano) %>%
@@ -176,8 +188,8 @@ server <- function(input, output, session) {
   })
 
   output$grafico_orc_medio <- renderPlot({
-    imdb %>%
-      filter(stringr::str_detect(generos, input$genero)) %>%
+
+    base_filtrada() %>%
       group_by(ano) %>%
       summarise(
         orc_medio = mean(orcamento, na.rm = TRUE)
@@ -187,8 +199,8 @@ server <- function(input, output, session) {
   })
 
   output$grafico_receita_media <- renderPlot({
-    imdb %>%
-      filter(stringr::str_detect(generos, input$genero)) %>%
+
+    base_filtrada() %>%
       group_by(ano) %>%
       summarise(
         receita_media = mean(receita, na.rm = TRUE)
