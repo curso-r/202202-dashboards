@@ -1,0 +1,7 @@
+name: exemploAuth0
+remote_url: 'https://acursor.shinyapps.io/exemploauth0/'
+auth0_config:
+  api_url: 'https://exemplocursodash.us.auth0.com'
+  credentials:
+    key: "..."
+    secret: "..."
